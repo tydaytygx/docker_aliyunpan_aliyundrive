@@ -53,6 +53,8 @@ cd docker-clouddrives
 
 chmod +x startapp.sh
 
+mkdir -p config downloads
+
 docker compose up -d
 ```
 ## 拉取资源并在本地构建镜像（可选）
@@ -68,6 +70,8 @@ cp -r docker-baseimage-gui/rootfs .
 chmod +x startapp.sh
 
 docker build -t clouddrives .
+
+mkdir -p config downloads
 
 docker compose up -d
 ```
